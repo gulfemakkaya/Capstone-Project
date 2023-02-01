@@ -65,8 +65,6 @@ export default function PlantCard() {
         {plants.map((plant) => {
           console.log(plant);
 
-          const wdt = 100;
-          const hdt = 100;
           return (
             <>
               <ListItem>
@@ -76,8 +74,8 @@ export default function PlantCard() {
                 {
                   <Image
                     src={plant.image}
-                    width={wdt}
-                    height={hdt}
+                    width={100}
+                    height={100}
                     alt={plant.name}
                   />
                 }
