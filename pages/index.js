@@ -1,3 +1,14 @@
+import PlantCard from "@/components/PlantCard";
+import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import TitleBar from "@/components/TitleBar";
+
 export default function HomePage() {
-  return <h1>Hello from Next.js</h1>;
+  return (
+    <>
+      <main>
+        <PlantCard />
+      </main>
+    </>
+  );
 }
