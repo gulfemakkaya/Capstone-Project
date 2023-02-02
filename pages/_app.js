@@ -7,10 +7,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Head>
-        <TitleBar />
-      </Head>
 
+      <Head></Head>
+      <TitleBar />
       <Component {...pageProps} />
     </>
   );

@@ -1,10 +1,9 @@
 import { createGlobalStyle } from "styled-components";
-//components/List.js
 import styled from "styled-components";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import initialPlants from "@/public/data";
+import { v4 as uuidv4 } from "uuid";
 
 export default function PlantCard() {
   const [plants, setPlants] = useState(initialPlants);
@@ -13,24 +12,21 @@ export default function PlantCard() {
     <>
       <StyledList>
         {plants.map((plant) => {
-          console.log(plant);
+          console.log(uuidv4());
 
           return (
-            <>
-              <ListItem>
-                <h2>{plant.name}</h2>
-                <br />
+            <ListItem key={uuidv4()}>
+              <h2>{plant.name}</h2>
 
-                {
-                  <Image
-                    src={plant.image}
-                    width={100}
-                    height={100}
-                    alt={plant.name}
-                  />
-                }
-              </ListItem>
-            </>
+              {
+                <Image
+                  src={plant.image}
+                  width={100}
+                  height={100}
+                  alt={plant.name}
+                />
+              }
+            </ListItem>
           );
         })}
       </StyledList>
