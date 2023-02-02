@@ -6,8 +6,8 @@ import TitleBar from "@/components/TitleBar";
 export default function HomePage() {
   return (
     <>
+      <TitleBar />
       <main>
-        <TitleBar />
         <PlantCard />
       </main>
     </>

@@ -5,4 +5,7 @@ export default function TitleBar() {
 }
 const H1Item = styled.h1`
   text-align: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 `;
