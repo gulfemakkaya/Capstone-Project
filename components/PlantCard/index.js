@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import initialPlants from "@/public/data";
 import { v4 as uuidv4 } from "uuid";
+import AddPlantButton from "../Buttons/AddPlantButton";
 
 export default function PlantCard() {
   const [plants, setPlants] = useState(initialPlants);
@@ -12,8 +13,6 @@ export default function PlantCard() {
     <>
       <StyledList>
         {plants.map((plant) => {
-          console.log(uuidv4());
-
           return (
             <ListItem key={uuidv4()}>
               <h2>{plant.name}</h2>

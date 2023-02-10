@@ -9,7 +9,9 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
 
       <Head></Head>
+
       <TitleBar />
+
       <Component {...pageProps} />
     </>
   );
