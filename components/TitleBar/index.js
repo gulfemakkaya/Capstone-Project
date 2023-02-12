@@ -8,4 +8,5 @@ const H1Item = styled.h1`
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 `;
