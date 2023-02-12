@@ -62,13 +62,15 @@ const initialPlants = [
   },
   {
     name: "Maranta",
-    image: "",
+    image:
+      "https://images.pexels.com/photos/15406171/pexels-photo-15406171.jpeg",
     watering: "every 1-2 weeks",
     light: "bright indirect light",
   },
   {
     name: "Peperomia",
-    image: "",
+    image:
+      "https://images.pexels.com/photos/10984050/pexels-photo-10984050.jpeg",
     watering: "every 1-2 weeks",
     light: "bright indirect light",
   },

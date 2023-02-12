@@ -8,16 +8,11 @@ import OpenPopupButton from "@/components/Buttons/OpenPopupButton";
 import { useState } from "react";
 
 export default function HomePage() {
-  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <>
       <main>
         <PlantCard />
-
-        <button onClick={() => setButtonPopup(true)}>Open PopUp</button>
-        <button onClick={() => setButtonPopup(false)}>Close PopUp</button>
       </main>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
     </>
   );
 }
