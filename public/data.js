@@ -1,3 +1,5 @@
+import { atomWithStorage } from "jotai/utils";
+
 const initialPlants = [
   {
     name: "Snake Plant",
@@ -179,4 +181,5 @@ const initialPlants = [
   },
 ];
 
-export default initialPlants;
+const globalPlants = atomWithStorage("plants", initialPlants);
+export default globalPlants;
