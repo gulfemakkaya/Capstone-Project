@@ -2,12 +2,13 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import initialPlants from "@/public/data";
+import globalPlants from "@/public/data";
 import { v4 as uuidv4 } from "uuid";
 import AddPlantButton from "../Buttons/AddPlantButton";
+import { useAtom } from "jotai";
 
 export default function PlantCard() {
-  const [plants, setPlants] = useState(initialPlants);
+  const [plants, setPlants] = useAtom(globalPlants);
 
   return (
     <>
