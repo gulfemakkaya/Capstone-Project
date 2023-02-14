@@ -1,36 +1,34 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import globalPlants from "@/public/data";
-import { v4 as uuidv4 } from "uuid";
-import AddPlantButton from "../Buttons/AddPlantButton";
+
 import { useAtom } from "jotai";
 
 export default function PlantCard() {
   const [plants, setPlants] = useAtom(globalPlants);
+  function handleDelete(id) {
+    setPlants(plants.filter((plant) => plant.id !== id));
+  }
 
   return (
-    <>
-      <StyledList>
-        {plants.map((plant) => {
-          return (
-            <ListItem key={uuidv4()}>
-              <h2>{plant.name}</h2>
+    <StyledList>
+      {plants.map((plant) => {
+        return (
+          <ListItem key={plant.id}>
+            <button onClick={() => handleDelete(plant.id)}>Delete</button>
+            <h2>{plant.name}</h2>
 
-              {
-                <Image
-                  src={plant.image}
-                  width={100}
-                  height={100}
-                  alt={plant.name}
-                />
-              }
-            </ListItem>
-          );
-        })}
-      </StyledList>
-    </>
+            <Image
+              src={plant.image}
+              width={100}
+              height={100}
+              alt={plant.name}
+            />
+          </ListItem>
+        );
+      })}
+    </StyledList>
   );
 }
 
