@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import Image from "next/image";
 import globalPlants from "@/public/data";
-import { v4 as uuidv4 } from "uuid";
+
 import { useAtom } from "jotai";
 
 export default function PlantCard() {
@@ -11,11 +11,6 @@ export default function PlantCard() {
     setPlants(plants.filter((plant) => plant.id !== id));
   }
 
-  // function deleteItem(index) {
-  //   const updatedPlants = [...plants];
-  //   updatedItems.splice(index, 1);
-  //   setPlants(updatedPlants);
-  // }
   return (
     <StyledList>
       {plants.map((plant) => {
@@ -24,14 +19,12 @@ export default function PlantCard() {
             <button onClick={() => handleDelete(plant.id)}>Delete</button>
             <h2>{plant.name}</h2>
 
-            {
-              <Image
-                src={plant.image}
-                width={100}
-                height={100}
-                alt={plant.name}
-              />
-            }
+            <Image
+              src={plant.image}
+              width={100}
+              height={100}
+              alt={plant.name}
+            />
           </ListItem>
         );
       })}
