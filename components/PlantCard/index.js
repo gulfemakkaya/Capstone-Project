@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import Image from "next/image";
 import globalPlants from "@/public/data";
-
 import { useAtom } from "jotai";
 
 export default function PlantCard() {
@@ -18,7 +17,6 @@ export default function PlantCard() {
           <ListItem key={plant.id}>
             <button onClick={() => handleDelete(plant.id)}>Delete</button>
             <h2>{plant.name}</h2>
-
             <Image
               src={plant.image}
               width={100}
