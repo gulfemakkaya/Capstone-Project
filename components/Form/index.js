@@ -58,7 +58,7 @@ export default function Form() {
     //   name: plantName,
     //   wateringTime: wateringTime,
     // };
-    setPlants([...plants, newPlant]);
+    setPlants([...plants, { ...newPlant, id: crypto.randomUUID() }]);
     console.log(newPlant);
   }
 
