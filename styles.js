@@ -9,7 +9,10 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: slabo;
+    background-color: #e1ddd3;
+    heigth: 100%;
+
   }  
   
   main {
