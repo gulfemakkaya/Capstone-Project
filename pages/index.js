@@ -19,3 +19,7 @@ export default function HomePage() {
     </>
   );
 }
+
+const StyledMain = styled.main`
+  background-color: #9f684b;
+`;
