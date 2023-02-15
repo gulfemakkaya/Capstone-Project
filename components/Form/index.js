@@ -17,6 +17,7 @@ export default function Form({ setTrigger }) {
     <>
       <StyledFormTitle>Add a new plant</StyledFormTitle>
       <StyledForm
+        autoComplete="off"
         onSubmit={(event) => {
           handleSubmit(event);
           setTrigger(false);
