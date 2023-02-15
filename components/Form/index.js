@@ -10,7 +10,7 @@ export default function Form({ setTrigger }) {
     const formData = new FormData(event.target);
     const newPlant = Object.fromEntries(formData);
 
-    setPlants([...plants, { ...newPlant, id: crypto.randomUUID() }]);
+    setPlants([{ ...newPlant, id: crypto.randomUUID() }, ...plants]);
   }
 
   return (
