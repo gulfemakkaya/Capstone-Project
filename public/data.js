@@ -1,3 +1,4 @@
+import PlantCard from "@/components/PlantCard";
 import { atomWithStorage } from "jotai/utils";
 
 const initialPlants = [

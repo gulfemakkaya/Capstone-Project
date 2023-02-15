@@ -11,10 +11,7 @@ export default function Form() {
     event.preventDefault();
     const formData = new FormData(event.target);
     const newPlant = Object.fromEntries(formData);
-    // const newPlant = {
-    //   name: plantName,
-    //   wateringTime: wateringTime,
-    // };
+
     setPlants([...plants, { ...newPlant, id: crypto.randomUUID() }]);
     console.log(newPlant);
   }
@@ -37,6 +34,14 @@ export default function Form() {
           </option>
           <option value="all two days">all two days</option>
         </select>
+        <label htmlFor="Place"> Place: </label>
+        <select name="place" id="Place">
+          <option value="living room" id="Place">
+            living room
+          </option>
+        </select>
+        <label htmlFor="Last watering"> Last watering: </label>
+        <input name="date" type="date" id="Last watering"></input>
         <button type="submit">submit</button>
       </form>
     </>
