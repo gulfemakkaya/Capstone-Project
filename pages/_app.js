@@ -17,7 +17,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-
-// const StyledBody = styled.body`
-//   background-color: #;
-// `;

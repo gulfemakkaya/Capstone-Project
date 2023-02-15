@@ -13,8 +13,14 @@ export default function HomePage() {
       <main>
         <PlantCard />
       </main>
-      <button onClick={() => setButtonPopup(true)}>Open PopUp</button>
-      <button onClick={() => setButtonPopup(false)}>Close PopUp</button>
+
+      <button
+        onClick={() => {
+          setButtonPopup(!buttonPopup);
+        }}
+      >
+        {buttonPopup ? "-" : "+"}
+      </button>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
     </>
   );

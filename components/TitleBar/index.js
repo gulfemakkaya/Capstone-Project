@@ -18,5 +18,3 @@ const H1Item = styled.h1`
   
   
 `;
-
-const StyledTitleBar = styled.div``;

@@ -4,9 +4,9 @@ export default function Popup(props) {
   return props.trigger ? (
     <StyledPopup>
       <StyledPopupInner>
-        <Form />
+        <Form setTrigger={props.setTrigger} />
         <PopupInnerCloseButton onClick={() => props.setTrigger(false)}>
-          close
+          x
         </PopupInnerCloseButton>
         {props.children}
       </StyledPopupInner>
