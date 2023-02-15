@@ -2,13 +2,6 @@ import styled from "styled-components";
 import Form from "../Form";
 
 export default function Popup(props) {
-  // const [hasMounted, setHasMounted] = useState(false);
-  // useEffect(() => {
-  //   setHasMounted(true);
-  // }, []);
-  // if (!hasMounted) {
-  //   return null;
-  // }
   return props.trigger ? (
     <StyledPopup>
       <StyledPopupInner>
