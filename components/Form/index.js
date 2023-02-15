@@ -19,7 +19,6 @@ export default function Form({ setTrigger }) {
     <>
       <h2>Add a new plant</h2>
       <form
-        type="add-edit"
         onSubmit={(event) => {
           handleSubmit(event);
           setTrigger(false);
